@@ -1,0 +1,92 @@
+﻿@model IEnumerable<EventManagement.Domain.Entities.task>
+
+
+
+
+<div class="page-header">
+    <div class="container">
+        <div class="page-header-inner">
+            <ol class="breadcrumb wow fadeInDown animated" data-wow-delay="300ms" style="visibility: visible;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;">
+                <li><a href="index.html">Home</a></li>
+                <li class="page">Single Post</li>
+            </ol>
+            <h1 class="page-title wow fadeInRight animated" data-wow-delay="300ms" style="visibility: visible;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;">
+                Single Post
+            </h1>
+        </div>
+    </div>
+</div>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.assignBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateDebut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateFin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.orderTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.statutTask)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.event_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.organizer_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.assignBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateDebut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateFin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.orderTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.statutTask)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.event_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.organizer_id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

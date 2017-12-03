@@ -1,0 +1,114 @@
+﻿@model IEnumerable<EventManagement.Domain.Entities.Event>
+
+
+<div class="page-header">
+    <div class="container">
+        <div class="page-header-inner">
+            <ol class="breadcrumb wow fadeInDown animated" data-wow-delay="300ms" style="visibility: visible;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;">
+                <li><a href="index.html">Home</a></li>
+                <li class="page">events/ participe</li>
+            </ol>
+            <h1 class="page-title wow fadeInRight animated" data-wow-delay="300ms" style="visibility: visible;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;">
+                List To participe
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+
+<section id="content" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Start Single Post Area -->
+
+
+
+                <table class="table">
+                    <tr>
+
+
+                        <th>
+                            @Html.DisplayName("Name")
+                        </th>
+                        <th>
+
+                        </th>
+                        <th>
+                            @Html.DisplayName("Category")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Date Event")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Description")
+                        </th>
+
+                        <th>
+                            @Html.DisplayName("Place")
+                        </th>
+
+                        <th></th>
+                    </tr>
+                    @{int i = 0;}
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.name)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.InformationsOfTicket)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.category)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.dateEvent)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.description)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.place)
+                            </td>
+
+
+
+
+                            <td>
+                                <button class="btn">
+                                    @if (ViewBag.listCheckParicipation[i] == true)
+                {
+                                        <p>@Html.ActionLink("Cancel Participation", "Delete", new { id = item.id })</p>
+
+                                    }
+                                    else
+                                    {
+                                        @Html.ActionLink("Participate", "Create", new { id_event = item.id })
+                                    }
+                                </button>
+                            </td>
+
+                        </tr>
+                        i++;
+                    }
+
+                </table>
+
+
+                <!-- End Single Post Area -->
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+

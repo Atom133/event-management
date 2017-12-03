@@ -1,0 +1,96 @@
+﻿@model IEnumerable<EventManagement.Domain.Entities.EventOrganizer>
+
+<div class="page-header">
+    <div class="container">
+        <div class="page-header-inner">
+            <ol class="breadcrumb wow fadeInDown animated" data-wow-delay="300ms" style="visibility: visible;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;">
+                <li><a href="index.html">Home/Presient/accept</a></li>
+                <li class="page">Participants request for events</li>
+            </ol>
+            <h1 class="page-title wow fadeInRight animated" data-wow-delay="300ms" style="visibility: visible;-webkit-animation-delay: 300ms; -moz-animation-delay: 300ms; animation-delay: 300ms;">
+                Accpet Participant
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<section id="content" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Start Single Post Area -->
+
+
+                @using (Html.BeginForm())
+                {
+                    @Html.TextBox("eventName")
+                   <button class="btn active dropdown"><input  type="submit" name="search" value="search" /></button>
+                }
+
+
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayName("Event Name")
+                        </th>
+                        <th>
+                            @Html.DisplayName("Organizer Name")
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.message)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.statutRequest)
+                        </th>
+                        <th></th>
+                        <th></th>
+
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.myevent.name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.organizer.lastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.message)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.statutRequest)
+                            </td>
+                            <td>
+                                <button class="btn btn-default"> @Html.ActionLink("Accept", "AcceptOrganizer", new { id = item.Id })</button><td>
+                           <td>     <button class="btn btn-default"> @Html.ActionLink("Refuse", "RefuseOrganizer", new { id = item.Id }) </button>
+                            </td>
+                        </tr>
+                    }
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+
+                    </tr>
+
+                </table>
+                <!-- End Single Post Area -->
+
+            </div>
+
+
+        </div>
+    </div>
+</section>

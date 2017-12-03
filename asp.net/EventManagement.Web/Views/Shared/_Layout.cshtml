@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Impression | Bootstrap HTML5 Conference and Event Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/assets/css/bootstrap.min.css")">
+
+ 
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/assets/css/main.css")">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/assets/css/responsive.css")">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/assets/fonts/font-awesome.min.css")">
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/assets/fonts/simple-line-icons.css")">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/assets/css/slicknav.css")">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/assets/css/nivo-lightbox.css")">
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/assets/css/animate.css")">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/assets/css/owl.carousel.css")">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/4E74723C-8053-874F-BC6D-E5692253D2D8/main.js" charset="UTF-8"></script>
+    @RenderSection("scripts", required: false)
+
+</head>
+<body>
+
+    <header id="header-wrap">
+        <!-- Roof area Starts -->
+        <div id="roof" class="hidden-xs">
+            <div class="container">
+                <div class="col-md-6 col-sm-6">
+                    <div class="info-bar-address">
+                        <i class="icon-location-pin"></i> Tunisie
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <!-- Quick Contacts Starts -->
+                    <div class="quick-contacts">
+                            @Html.Partial("_LoginPartial")
+                    </div>
+                    <!-- Quick Contacts End -->
+                </div>
+            </div>
+        </div>
+        <!-- Roof area End -->
+        <!-- Nav Menu Section Start -->
+        <div class="navigation-menu">
+            <nav class="navbar navbar-default navbar-event affix-top" role="navigation" data-spy="affix" data-offset-top="20">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header col-md-2">
+                        <div class="slicknav_menu">
+                            <span aria-haspopup="true" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></span><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+                                <li><a href="index.html" role="menuitem" tabindex="-1">Home</a></li>
+                                <li class="slicknav_collapsed slicknav_parent">
+                                    <span role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;">
+                                        <a href="#" tabindex="-1">Pages</a>
+                                        <span class="slicknav_arrow"><i class="fa fa-angle-right"></i></span>
+                                    </span><ul class="dropdown slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+                                        <li><a href="about.html" role="menuitem" tabindex="-1">About Us</a></li>
+                                        <li><a href="gallery.html" role="menuitem" tabindex="-1">Gallery</a></li>
+                                        <li><a href="pricing.html" role="menuitem" tabindex="-1">Pricing Table</a></li>
+                                        <li><a href="sponsors.html" role="menuitem" tabindex="-1">Sponsors</a></li>
+                                        <li class="active"><a href="single-post.html" role="menuitem" tabindex="-1">Single Post</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="schedule.html" role="menuitem" tabindex="-1">Schedule</a></li>
+                                <li><a href="speakers.html" role="menuitem" tabindex="-1">Speakers</a></li>
+                                <li><a href="blog.html" role="menuitem" tabindex="-1">Blog</a></li>
+                                <li><a href="pricing.html" role="menuitem" tabindex="-1">Buy Tickets</a></li>
+                                <li><a href="contact.html" role="menuitem" tabindex="-1">Contact</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <img src="@Url.Content("~/Content/img/logo.png")" height="100" width="200" class="btn-border" alt="" />
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="pricing.html">Pricing Table</a></li>
+                                    <li><a href="sponsors.html">Sponsors</a></li>
+                                    <li class="active"><a href="single-post.html">Single Post</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="schedule.html">Schedule</a></li>
+                            <li><a href="speakers.html">Speakers</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li class="animated bounceIn"><a href="pricing.html">Buy Tickets</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div><!-- /navbar-collapse -->
+                </div><!-- /container -->
+                <!-- Mobile Menu Start -->
+                <!-- Mobile Menu End -->
+
+            </nav>
+        </div>
+        <!-- Nav Menu Section End -->
+
+    </header>
+        @RenderBody()
+
+    <!-- Copytight Start -->
+    <section id="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="copyright-text text-center">
+                        ©Designed and Developed by
+                        <a href="http://graygrids.com/">
+                            GrayGrids
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Copytight End -->
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+        <i class="icon-arrow-up"></i>
+    </a>
+
+    <div class="bottom"> <a href="#" class="settings"></a> </div>
+
+    <!-- jQuery Load -->
+    <script src="@Url.Content("~/Content/assets/js/jquery.min.js")"></script>
+    <!-- Bootstrap JS -->
+    <script src="@Url.Content("~/Content/assets/js/jquery.countdown.min.js")assets/js/bootstrap.min.js"></script>
+    <!-- Countdown Js -->
+    <script src="@Url.Content("~/Content/css/bootstrap.min.css")"></script>
+    <!-- Smooth scroll JS -->
+    <script src="@Url.Content("~/Content/assets/js/smooth-scroll.js")"></script>
+    <!-- Wow Scroll -->
+    <script src="@Url.Content("~/Content/assets/js/wow.js")"></script>
+    <!-- Owl carousel -->
+    <script src="@Url.Content("~/Content/assets/js/owl.carousel.min.js")"></script>
+    <!-- Slicknav js -->
+    <script src="@Url.Content("~/Content/assets/js/jquery.slicknav.js")"></script>
+    <!--  Nivo lightbox Js -->
+    <script src="@Url.Content("~/Content/assets/js/nivo-lightbox.js")"></script>
+    <!-- Contact Form Scripts -->
+    <script src="@Url.Content("~/Content/assets/js/form-validator.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/js/contact-form-script.js")"></script>
+
+    <!-- All Js plugin -->
+    <script src="@Url.Content("~/Content/assets/js/main.js")"></script>
+    <!-- Map JS -->
+    <script type="text/javascript" src="@Url.Content("~/Content/assets/js/jquery.mapit.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/js/initializers.js")"></script>
+
+</body>
+</html>
